@@ -5,7 +5,6 @@ import java.io.IOException;
 import fr.oriane.main.MainApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 
 public class ControllerAccueil {
@@ -13,16 +12,11 @@ public class ControllerAccueil {
 	private Button entree;
 	@FXML
 	private Button sortie;
-	private MainApp MainApp;
 	
-	public void setMainApp(fr.oriane.main.MainApp MainApp) {
-		   this.MainApp = MainApp;
-		}
-
 	@FXML
 	public void handleButtonEntreeClick(ActionEvent event) throws IOException {
 		// Appeler le controleur de la page de choix de la salle
-		MainApp.afficheVue("../view/ChoixSalle.fxml");
+		MainApp.afficheVue("../view/VueChoixSalle.fxml");
 	}
 	
 	public void handleButtonSortieClick() {

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.oriane.view.ControllerChoixSalle">
+   <children>
+      <Button fx:id="fitness" layoutX="20.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleButtonFitnessClick" prefHeight="30.0" prefWidth="150.0" text="FITNESS">
+         <font>
+            <Font name="Gisha Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="musculation" layoutX="188.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleButtonmusculationClick" prefHeight="54.0" prefWidth="205.0" text="MUSCULATION">
+         <font>
+            <Font name="Gisha Bold" size="25.0" />
+         </font>
+      </Button>
+      <Label layoutX="27.0" layoutY="38.0" prefHeight="56.0" prefWidth="353.0" text="Faite votre choix">
+         <font>
+            <Font name="Gisha Bold" size="46.0" />
+         </font>
+      </Label>
+      <Circle fx:id="entreeFitness" fill="DODGERBLUE" layoutX="95.0" layoutY="174.0" radius="42.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="entreeMuscu" fill="DODGERBLUE" layoutX="297.0" layoutY="174.0" radius="42.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

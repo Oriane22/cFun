@@ -10,6 +10,26 @@ import java.util.List;
 public class Complexe {
 	private static int numeroActuel = 0;
 
+	private String nomComplexe;
+	
+	private int nbTotalPlacesFit;
+	private int nbTotalPlacesMuscu;
+	
+	private int nbPlacesOccupeesFit;
+	private int nbPlacesOccupeesMuscu;
+	
+	public List<Arrivee> lesArrivees = new ArrayList<Arrivee>();
+
+	public Complexe(int nbTotalPlacesMuscu, int nbTotalPlacesFit,
+			String nomComplexe) {
+		this.nbTotalPlacesFit = nbTotalPlacesFit;
+		this.nbTotalPlacesMuscu = nbTotalPlacesMuscu;
+		this.nomComplexe = nomComplexe;
+		this.nbPlacesOccupeesFit = 0;
+		this.nbPlacesOccupeesMuscu = 0;
+	}
+	
+	
 	public static int getNumeroActuel() {
 		return numeroActuel;
 	}
@@ -18,19 +38,10 @@ public class Complexe {
 		Complexe.numeroActuel = Complexe.getNumeroActuel() + 1;
 	}
 
-	private String nomComplexe;
 
 	public String getNomComplexe() {
 		return nomComplexe;
 	}
-
-	private int nbTotalPlacesFit;
-	private int nbTotalPlacesMuscu;
-
-	private int nbPlacesOccupeesFit;
-	private int nbPlacesOccupeesMuscu;
-
-	List<Arrivee> lesArrivees = new ArrayList<Arrivee>();
 
 	public boolean entreeUsager(final Arrivee uneArrivee) {
 		boolean ok;
@@ -68,14 +79,6 @@ public class Complexe {
 		return leDepart;
 	}
 
-	public Complexe(final int nbTotalPlacesMuscu, final int nbTotalPlacesFit,
-			final String nomComplexe) {
-		this.nbTotalPlacesFit = nbTotalPlacesFit;
-		this.nbTotalPlacesMuscu = nbTotalPlacesMuscu;
-		this.nomComplexe = nomComplexe;
-		this.nbPlacesOccupeesFit = 0;
-		this.nbPlacesOccupeesMuscu = 0;
-	}
 
 	private String couleurMuscu() {
 		ChoixCouleur choixCouleur = new ChoixCouleur(this.etatMuscu());
